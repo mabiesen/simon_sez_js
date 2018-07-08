@@ -48,21 +48,22 @@
 }
 
 .circle-wrapper{
-  padding-top: 25px;
+  padding-top: 10px;
   width: 100%;
 }
 
 /* --------------------------------------------------------------------- */
 /* ---------------------- CONTROLS -------------------------------- */
-.controls-wrapper{
+#controls-wrapper{
   display: block;
   width: 100%;
-  height: 50px;
+  min-height: 50px;
 }
 
 #startgame{
   float: left;
   border: 1px solid black;
+  border-radius: 3px;
   width: 150px;
   height: 50px;
   line-height: 50px;
@@ -71,9 +72,9 @@
   box-sizing: border-box;
 }
 
-#level, #round{
-  border: 1px solid black;
+#round-label, #round{
   float: right;
+  border: 1px solid black;
   width: 100px;
   height: 50px;
   line-height: 50px;
@@ -81,20 +82,33 @@
   box-sizing: border-box;
 }
 
+#round-label{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#round{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
 
+#roundwrapper{
+  float: right;
+  box-sizing: border-box;
+}
 
 /*  slider     */
 
 .switchwrapper{
   height: 50px;
   width: 200px;
-  display: inline-block;
+  float: left;
   box-sizing: border-box;
 }
 
 #soundswitch{
   float: left;
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .switch {
@@ -151,4 +165,29 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media(min-width: 1417px){
+  #circle{
+    width: 40vw;
+    height: 40vw;
+  }
+  .quarter{
+    width: 20vw;
+    height: 20vw;
+  }
+  #startgame{
+    margin-left: 100px;
+  }
+  #round-label{
+    margin-right: 100px;
+  }
+}
+
+@media(max-width: 567px){
+  #roundwrapper{
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }

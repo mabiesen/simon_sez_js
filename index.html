@@ -6,18 +6,19 @@
   <script src="simon_sez.js"></script>
 </head>
 <div id="simon-wrapper">
-  <div class="controls-wrapper">
+  <div id="controls-wrapper">
     <div id="startgame" onClick="startGame()">Start the game</div>
     <div class="switchwrapper">
-      <div style="text-align: center; float: left; padding-left: 20px; height: 100%; vertical-align: center;">Sound</div>
+      <div style="text-align: center; line-height: 34px; margin-top: 10px; float: left; padding-left: 20px; height: 100%; vertical-align: center;">Sound</div>
       <label id="soundswitch" class="switch">
         <input id="switchinput" type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
-
-    <div id="level">Round</div>
-    <div id="round">waiting..</div>
+    <div id="roundwrapper">
+      <div id="round-label">Round</div>
+      <div id="round">waiting..</div>
+    </div>
   </div>
   <div class="circle-wrapper">
     <div id="circle">
