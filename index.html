@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" type="text/css" href="./index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="simon_sez.js"></script>
+</head>
+
+<div class="controls-wrapper">
+  <div id="startgame" onClick="startGame()">Start the game</div>
+  <label id="soundswitch" class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <div id="level">Round</div>
+  <div id="round">waiting..</div>
+</div>
+<div class="circle-wrapper">
+  <div id="circle">
+    <div id="q1" data-id="a_sharp.wav" class="quarter" onClick="userClick(this.id)"></div>
+    <div id="q2" data-id="g_sharp.wav" class="quarter" onClick="userClick(this.id)"></div>
+    <div id="q3" data-id="f_sharp.wav" class="quarter" onClick="userClick(this.id)"></div>
+    <div id="q4" data-id="d_sharp.wav" class="quarter" onClick="userClick(this.id)"></div>
+  </div>
+</div>
