@@ -107,7 +107,23 @@ function userClick(elid){
 
   }else{
     console.log("round failed");
-    alert("failed");
-    alert("You lasted " + sessionStorage.getItem("round") + " rounds!");
+    var num_rounds_completed = sessionStorage.getItem("round") - 1;
+    var rnd_word = ""
+    if(num_rounds_completed == "1"){
+      rnd_word = "round!";
+    }else{
+      rnd_word = "rounds!"
+    }
+    var alert_box = `
+    <div id="alert-box">
+      <div id="alert-box_escape" onClick="$('#alert-box').remove()">X</div>
+      <div id="alert-box_content">
+        <p style="font-weight: bold; font-size: 36px;">Congratulations!</p>
+        <p>you lasted ` +
+        num_rounds_completed + " " + rnd_word +
+      ` </p>
+      </div>
+    </div>`;
+    $('html').append(alert_box);
   }
 }

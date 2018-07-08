@@ -1,0 +1,33 @@
+#alert-box{
+  background-color: white;
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 5px 10px #888888;
+  border: 1px solid #888888;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;  /* make main axis vertical */
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center;     /* center items horizontally, in this case */
+  box-sizing: border-box;
+}
+
+.alert-box_active{
+  top: 50%;
+}
+
+#alert-box_content{
+  text-align: center;
+}
+
+#alert-box_escape{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor:pointer;
+}
