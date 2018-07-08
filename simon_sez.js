@@ -124,6 +124,6 @@ function userClick(elid){
       ` </p>
       </div>
     </div>`;
-    $('html').append(alert_box);
+    $('body').append(alert_box);
   }
 }
