@@ -74,26 +74,23 @@
 
 #round-label, #round{
   float: right;
-  border: 1px solid black;
-  width: 100px;
-  height: 50px;
+  width: 50%;
+  height: 100%;
   line-height: 50px;
   text-align: center;
   box-sizing: border-box;
 }
 
 #round-label{
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-#round{
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-right: 1px solid black;
 }
 
 #roundwrapper{
   float: right;
+  border: 1px solid black;
   box-sizing: border-box;
+  width: 200px;
+  height: 50px;
 }
 
 /*  slider     */
@@ -169,25 +166,37 @@ input:checked + .slider:before {
 
 @media(min-width: 1417px){
   #circle{
-    width: 40vw;
-    height: 40vw;
+    width: 80vh;
+    height: 80vh;
   }
   .quarter{
-    width: 20vw;
-    height: 20vw;
+    width: 40vh;
+    height: 40vh;
   }
   #startgame{
     margin-left: 100px;
   }
-  #round-label{
+  #roundwrapper{
     margin-right: 100px;
   }
 }
 
 @media(max-width: 567px){
+  #controls-wrapper{
+    max-width: 400px;
+    margin-left: 20px;
+  }
   #roundwrapper{
     float: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 20px;
+    height: 30px;
+  }
+  #round, #round-label{
+    font-size: 18px;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  #circle{
+      margin-top: 70px;
   }
 }
