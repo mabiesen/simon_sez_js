@@ -8,17 +8,21 @@ function genRandom(){
 }
 
 function playSound(id){ //dynamic sound function, uses file location as argument.  accepts relative location
+//if toggle is on, execute, otherwise do nothing
 
-  var url = $('#' + id).attr("data-id");
+  if($('#switchinput').is(':checked')){
+    console.log("ahhhhhhhhhhhhhhhhhhhhhhhh");
+    var url = $('#' + id).attr("data-id");
 
-  var audio = document.createElement('audio');
-  audio.style.display = "none";
-  audio.src = url;
-  audio.autoplay = true;
-  audio.onended = function(){
-    audio.remove(); //Remove when played.
+    var audio = document.createElement('audio');
+    audio.style.display = "none";
+    audio.src = url;
+    audio.autoplay = true;
+    audio.onended = function(){
+      audio.remove(); //Remove when played.
+    }
+    document.body.appendChild(audio);
   }
-  document.body.appendChild(audio);
 }
 
 function startGame(){
@@ -61,7 +65,7 @@ function displaySimon(){
       if (i >= temp_array.length) {
           clearInterval(interval);
       }
-  }, 1000);
+  }, 700);
 }
 
 function freshRound(){
